@@ -204,7 +204,8 @@ export class TzktService implements Indexer {
       }).catch(e => {
         return null;
       });
-    const tokenMetadata = fetch(`${this.bcd}/contract/${this.network}/${contractAddress}/tokens?token_id=${id}&offset=0`)
+    //const tokenMetadata = fetch(`${this.bcd}/contract/${this.network}/${contractAddress}/tokens?token_id=${id}&offset=0`)
+    const tokenMetadata = fetch(`https://metadata.kukai.network/${this.network}/tokenInfo/${contractAddress}/${id}`)
       .then(response => response.json())
       .then(async datas => {
         const keys = [
