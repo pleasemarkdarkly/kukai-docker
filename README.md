@@ -10,3 +10,13 @@ Install dependencies:
 Run during development:
 
 `ng serve --open`
+
+## Docker configuration
+
+Build and run Docker image with docker-compose:
+
+`docker-compose -f docker-compose.yml up`
+
+Open the website on localhost (port can be configured in .env file):
+
+`http://localhost:80/`

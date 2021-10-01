@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+
+  kukai-application:
+    container_name: kukai
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${DOCKER_PORT}:${DOCKER_PORT}"
