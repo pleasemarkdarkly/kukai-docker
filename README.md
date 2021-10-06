@@ -19,4 +19,4 @@ Build and run Docker image with docker-compose:
 
 Open the website on localhost (port can be configured in .env file):
 
-`http://localhost:80/`
+`http://localhost:{DOCKER_PORT}/`

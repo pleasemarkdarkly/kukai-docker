@@ -4,6 +4,8 @@
 FROM node:latest as build
 
 # Set the working directory
+RUN mkdir -p /usr/local/app/environments
+
 WORKDIR /usr/local/app
 
 # Add the source code to app
@@ -25,4 +27,4 @@ FROM nginx:latest
 COPY --from=build /usr/local/app/dist /usr/share/nginx/html
 
 # Expose port
-EXPOSE ${DOCKER_PORT}
+EXPOSE ${NGINX_PORT}
